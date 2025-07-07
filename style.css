@@ -206,7 +206,7 @@ nav a {
 
 @media (max-width: 768px) {
   .hero-content {
-    padding-top: 120px; /* ⬅ leaves space for your nav-bar */
+    padding-top: 345px; /* ⬅ leaves space for your nav-bar */
   }
 
   .nav-bar {
@@ -228,6 +228,40 @@ nav a {
   .nav-menu {
     flex-wrap: wrap;
     justify-content: center;
+    gap:10px;
+  }
+
+  .nav-menu li a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .contact-icons img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    align-items: flex-start; /* push content to top */
+    padding-top: 120px; /* space from top */
+    padding-bottom: 40px; /* extra space at bottom */
+    height: auto; /* allow height to grow */
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .round-pic {
+    width: 180px;
+    height: 180px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
