@@ -12,11 +12,15 @@ body {
 /* Navbar */
 .nav-bar {
   display: flex;
-  flex-wrap: wrap;              /* Allows wrapping if needed */
   justify-content: space-between;
   align-items: center;
-  padding: 20px 20px;
-  background: #3d4e4c;
+  background: transparent; 
+  padding: 20px;
+  position:absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index: 999;
 }
 
 .logo {
@@ -24,30 +28,151 @@ body {
   color: #f7f9fc;
 }
 
-nav ul {
+.logo-container {
+  background-color: #dfc6de;
+  padding: 10px 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.logo-container .contact-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.logo-container .contact-icons img {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo-container .contact-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+nav ul {
   list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f7f9fc;
+  font-weight: 500;
+}
+
+.nav-buttons-wrapper {
+  background-color: #dfc6de;
+  padding: 10px 20px;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
-nav a {
-  font-size: 0.95rem;
-  color: #f7f9fc;
+.nav-menu li a {
   text-decoration: none;
-  font-weight: 500;
-  white-space: nowrap;
+  color: #f7f9fc;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
+.nav-menu li a:hover {
+  background-color: #3d4e4c;
+  color: #f7f9fc;
+}
+
+
 /* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+  gap: 8px; /* ⬅ controls space between logo and banner */
+}
+
+.center-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 0; /* ⬅ remove excess space */
+}
+
+
+.video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.video-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #2d3938 100%);
+  z-index: 2;
+}
+
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrapper .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #dfc6dea8; /* semi-transparent overlay */
+  z-index: 1;
+}
+
+
+
 .hero-content {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   padding: 40px 20px;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
 }
 
 .hero-left {
@@ -94,14 +219,12 @@ nav a {
 }
 
 .banner {
-  font-size: 1.3em;
+  font-size: 2.4em;
+  font-weight: bold;
   color: #f7f9fc;
   height: 35px;
-  margin-top: 20px;
-  background: #3d4e4c;
+  margin-top: 5px;
   text-align: center;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   max-width: 100%;
   padding-top: 5px;
 }
@@ -300,25 +423,6 @@ footer {
   margin: 0 auto;        /* Horizontally centers whole block */
 }
 
-@media screen and (max-width: 600px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-}
 .project-preview {
   position: relative;
   width: 100%;
@@ -352,5 +456,4 @@ footer {
   padding: 10px;
   text-align: center;
 }
-
 
