@@ -100,6 +100,22 @@ nav a {
   color: #f7f9fc;
 }
 
+@media (max-width: 768px) {
+  .contact-icons img,
+  .nav-menu li a {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .nav-buttons-wrapper {
+    padding: 8px 16px;
+    border-radius: 30px;
+  }
+}
+
+
+
 
 /* Hero Section */
 .hero {
@@ -187,6 +203,34 @@ nav a {
   flex-direction: column;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 120px; /* ⬅ leaves space for your nav-bar */
+  }
+
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .nav-buttons-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 
 .round-pic {
   width: 240px;
@@ -456,4 +500,3 @@ footer {
   padding: 10px;
   text-align: center;
 }
-
