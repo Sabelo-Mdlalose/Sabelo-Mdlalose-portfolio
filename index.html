@@ -11,19 +11,45 @@
 
   <header>
     <div class="nav-bar">
-      <h1 class="logo"></h1>
+      <div class="logo-container">
+        <div class="contact-icons">
+          <a href="https://www.linkedin.com/in/sabelo-m-65275b1b4/" target="_blank">
+            <img src="linkedin-brands-solid.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://github.com/Sabelo-Mdlalose?tab=repositories" target="_blank">
+            <img src="github-brands.svg" alt="GitHub" />
+          </a>
+          <a href="mailto:sabelolol7@gmail.com">
+            <img src="maildotru.svg" alt="Email" />
+          </a>
+          <a href="tel:0662138285">
+            <img src="phone-solid.svg" alt="Phone" />
+          </a>
+        </div>
+      </div>
+
       <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="SABELO MDLALOSE(cv).pdf" download="Sabelo_Mdlalose_Resume.pdf">Resume</a></li>
-        </ul>
+        <div class="nav-buttons-wrapper">
+          <ul class="nav-menu">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/files/SABELO MDLALOSE(cv).pdf" download="Sabelo_Mdlalose_Resume.pdf">Resume</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
 
   <section class="hero">
+    <div class="video-wrapper">
+      <video autoplay muted loop playsinline>
+        <source src="19264a464315513c06c2dc242649e340.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div>
+    </div>
+
     <div class="hero-content">
       <div class="hero-left">
         <h2>Hi, I'm Sabelo Mdlalose</h2>
@@ -33,10 +59,16 @@
           Passionate about tech and programming, especially in ML, NLP, and AI system integration.<br />
           Continuously committed to learning and building meaningful projects.
         </p>
+      </div>
+
+      <!-- 👇 Insert new logo in center -->
+      <div class="hero-logo">
+        <img src="sabelomlogo-Picsart-BackgroundRemover 2-Picsart-BackgroundRemover.jpg" alt="Logo" class="center-logo" />
         <div class="banner">
           <span id="language">JavaScript</span>
         </div>
       </div>
+
       <div class="hero-right">
         <img src="IMG_20240627_131624_Original.jpg" alt="Sabelo Mdlalose" class="round-pic" />
       </div>
@@ -117,7 +149,7 @@
         <p>HTML | CSS | JavaScript</p>
       </div>
     </div>
-  </section> 
+  </section>
 
   <section id="contact" class="contact-section">
     <h2 class="section-title">Contact</h2>
@@ -150,4 +182,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
